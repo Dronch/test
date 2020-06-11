@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "changelog": "npm run release -- --skip.bump --skip.commit --skip.tag",
+    "release": "standard-version",
+    "release:dry-run": "npm run release -- --dry-run",
+    "commit": "git-cz"
+  },
+  "standard-version": {
+    "header": "# CHANGELOG\n",
+    "issueUrlFormat": "https://phypartners.atlassian.net/browse/{{id}}"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.4",
+    "cz-conventional-changelog": "^3.1.0",
+    "standard-version": "^7.1.0"
+  }
+}
